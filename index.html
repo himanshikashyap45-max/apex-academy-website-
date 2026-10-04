@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apex Academy | JEE, NEET, UPSC, SSC, CUET Coaching</title>
+<meta name="description" content="Apex Academy: expert faculty, mentorship and weekly mock tests for JEE, NEET, UPSC, SSC & Banking, CUET and Foundation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+<style>:root{--bg:#04141a;--bg2:var(--bg2);--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.12);--tx:#e8ecff;--mut:#a9b4dd;--blue:#2fbf8f;--cyan:#e5c15a;--pur:#27b5a6;--grad:linear-gradient(135deg,#2fbf8f,#27b5a6 55%,#3aa6d6);--r:22px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{font:400 1rem/1.65 'DM Sans',sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden;animation:fade .6s ease}
+@keyframes fade{from{opacity:0}}
+h1,h2,h3,.logo,strong{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img,svg{max-width:100%}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:10px;top:10px;background:#fff;color:#000;padding:8px;z-index:99}
+.wrap{width:min(1160px,92%);margin:auto}
+.narrow{width:min(780px,92%)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border:0;border-radius:999px;background:var(--grad);color:#fff;font:600 .95rem 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 8px 28px rgba(var(--c2),.32);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(var(--c2),.45)}
+.btn-sm{padding:.55rem 1.2rem;font-size:.88rem}
+.btn-ghost{background:var(--card);border:1px solid var(--line);box-shadow:none;backdrop-filter:blur(10px)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+.nav.stuck{background:rgba(var(--bgrgb),.82);backdrop-filter:blur(16px);box-shadow:0 6px 30px rgba(0,0,0,.35)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
+.logo{display:flex;align-items:center;gap:0;font-weight:700;font-size:1.25rem}
+.logo b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
+.logo-mark{margin-right:.6rem;display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--grad);box-shadow:0 0 18px rgba(var(--c2),.7);font-size:1rem}
+#menu{display:flex;gap:1.6rem;font-weight:500;color:var(--mut)}
+#menu a:not(.btn){position:relative;padding:.3rem 0;transition:color .2s}
+#menu a:not(.btn):hover,#menu a.on{color:#fff}
+#menu a.on::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--grad);border-radius:2px}
+.menu-cta,.burger{display:none}
+
+/* hero */
+.hero{position:relative;padding:150px 0 90px;overflow:hidden;background:linear-gradient(120deg,var(--h1),var(--h2),var(--h3),var(--h4));background-size:300% 300%;animation:flow 16s ease infinite}
+@keyframes flow{50%{background-position:100% 50%}}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.28;pointer-events:none}
+.o1{width:380px;height:380px;background:var(--blue);top:-80px;left:-100px}
+.o2{width:420px;height:420px;background:var(--pur);bottom:-140px;right:-100px}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;border:1px solid var(--line);border-radius:999px;background:var(--card);font-size:.85rem;color:var(--mut)}
+.pill i{font-size:.5rem;color:#2fbf8f;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.3}}
+h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.1;font-weight:800;margin:1.2rem 0;letter-spacing:-.02em}
+.lead{color:var(--mut);font-size:1.08rem;max-width:56ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;margin:2rem 0}
+.mini-stats{display:flex;gap:2.5rem}
+.mini-stats strong{display:block;font-size:1.9rem;color:var(--cyan)}
+.mini-stats span{color:var(--mut);font-size:.9rem}
+.hero-art{position:relative;padding:1rem}
+.illus{width:100%;filter:drop-shadow(0 20px 50px rgba(var(--c1),.22))}
+.badge{position:absolute;display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:16px;background:rgba(var(--surf),.75);border:1px solid var(--line);backdrop-filter:blur(12px);font-size:.82rem;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.4);animation:float 5s ease-in-out infinite}
+.badge i{color:#fbbf24}
+.b1{top:2%;left:-4%}.b2{top:46%;right:-4%;animation-delay:-1.5s}.b3{bottom:2%;left:6%;animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-14px)}}
+
+/* sections */
+.sec{padding:96px 0}.alt{background:var(--bg2)}
+.head{max-width:620px;margin-bottom:3rem}
+h2{font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1.2;margin-bottom:.8rem;letter-spacing:-.01em}
+.head p{color:var(--mut)}
+.grid{display:grid;gap:1.4rem}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.glass{background:var(--card);border:1px solid var(--line);border-radius:var(--r);backdrop-filter:blur(14px);box-shadow:0 10px 40px rgba(0,0,0,.25)}
+.stats{margin-top:-40px;position:relative;z-index:2}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.stat-grid .glass{padding:1.8rem;text-align:center;background:rgba(var(--surf2),.85)}
+.stat-grid strong{display:block;font-size:2.3rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-grid span{color:var(--mut)}
+
+/* cards */
+.card{padding:1.8rem;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-8px);border-color:rgba(var(--c2),.7);box-shadow:0 20px 50px rgba(var(--c2),.3)}
+.ico{display:grid;place-items:center;width:54px;height:54px;border-radius:16px;background:var(--grad);font-size:1.3rem;margin-bottom:1.1rem;box-shadow:0 0 22px rgba(var(--c2),.4)}
+.card h3{font-size:1.2rem;margin-bottom:.5rem}
+.card p{color:var(--mut);font-size:.95rem}
+.dur{display:inline-block;margin:.9rem 0 .4rem;padding:.2rem .8rem;border-radius:99px;background:rgba(var(--c3),.12);color:var(--cyan);font-size:.82rem;font-weight:600}
+.card ul{list-style:none;padding:0;margin:.4rem 0 1.3rem;font-size:.9rem;color:var(--mut)}
+.card li::before{content:"\2713";font-weight:700;color:var(--cyan);margin-right:.5rem}
+.link{font-weight:600;color:var(--link)}.link:hover{color:#fff}
+.course{display:flex;flex-direction:column}.course .link{margin-top:auto}
+.story .who{display:flex;align-items:center;gap:.9rem;margin-bottom:1rem}
+.av{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--grad);font:700 1rem 'Bricolage Grotesque',sans-serif;flex:none}
+.rank{margin-left:auto;padding:.25rem .7rem;border-radius:99px;background:rgba(var(--c3),.15);color:#fbbf24;font:700 .8rem 'Bricolage Grotesque',sans-serif;white-space:nowrap}
+.story small{color:var(--mut)}
+.story q{display:block;color:var(--tx);font-size:.96rem}
+.fac{text-align:center}
+.fac .av{width:96px;height:96px;margin:0 auto 1rem;font-size:1.6rem;box-shadow:0 0 0 4px rgba(var(--c2),.3)}
+.fac .soc{display:flex;gap:.6rem;justify-content:center;margin-top:1rem}
+.fac .soc a{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);color:var(--mut);transition:.2s}
+.fac .soc a:hover{background:var(--grad);color:#fff}
+
+/* split */
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center}
+.tabs{display:grid;gap:.7rem;margin-top:1.6rem}
+.tab{display:flex;align-items:center;gap:.9rem;padding:.9rem 1.1rem;border:1px solid var(--line);border-radius:16px;background:transparent;color:var(--mut);font:600 1rem 'DM Sans',sans-serif;cursor:pointer;text-align:left;transition:.25s}
+.tab:hover{color:#fff}
+.tab[aria-selected=true]{background:var(--card);color:#fff;border-color:var(--pur);transform:translateX(8px)}
+.panel{padding:2.2rem;min-height:340px;animation:fade .4s}
+.panel h3{font-size:1.5rem;margin:.6rem 0}
+.panel p{color:var(--mut)}
+.bars{margin-top:1.5rem;display:grid;gap:.9rem}
+.bar{font-size:.85rem;color:var(--mut)}
+.bar div{height:9px;border-radius:9px;background:rgba(255,255,255,.1);margin-top:.3rem;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:9px;background:var(--grad);transition:width 1s ease}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.chips span{padding:.4rem .9rem;border-radius:99px;border:1px solid var(--line);font-size:.85rem}
+
+/* forms */
+.demo,.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.ticks{list-style:none;padding:0;margin-top:1.4rem;display:grid;gap:.6rem}
+.ticks i{color:#2fbf8f;margin-right:.6rem}
+.form{padding:2rem;display:grid;gap:1.1rem}
+.form label,.form legend{display:grid;gap:.35rem;font-size:.9rem;font-weight:600}
+.form input:not([type=radio]),.form select,.form textarea{width:100%;padding:.8rem 1rem;border-radius:14px;border:1px solid var(--line);background:rgba(var(--bgrgb),.7);color:var(--tx);font:inherit}
+.form select option{background:var(--bg2)}
+.form input:focus,.form select:focus,.form textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 3px rgba(var(--c1),.3)}
+.form .bad{border-color:#f87171!important}
+.form small{color:#fca5a5;font-weight:500;min-height:0}
+fieldset{border:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+fieldset legend{width:100%;margin-bottom:.4rem}
+.radio{display:flex!important;grid-template-columns:none;align-items:center;gap:.5rem!important;font-weight:500!important}
+.radio input{accent-color:var(--pur)}
+.ok{padding:1rem;border-radius:14px;background:rgba(var(--c1),.12);border:1px solid rgba(var(--c1),.5);color:#6ee7b7;font-weight:500;animation:pop .4s}
+@keyframes pop{from{transform:scale(.95);opacity:0}}
+
+/* faq */
+.faq{display:grid;gap:.9rem}
+.q{border:1px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden}
+.q button{display:flex;justify-content:space-between;align-items:center;gap:1rem;width:100%;padding:1.2rem 1.4rem;background:none;border:0;color:var(--tx);font:600 1rem 'Bricolage Grotesque',sans-serif;text-align:left;cursor:pointer}
+.q button i{transition:transform .3s;color:var(--cyan)}
+.q.open button i{transform:rotate(45deg)}
+.q .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.q.open .a{grid-template-rows:1fr}
+.q .a p{overflow:hidden;padding:0 1.4rem;color:var(--mut)}
+.q.open .a p{padding-bottom:1.2rem}
+
+/* contact */
+.info{list-style:none;padding:0;display:grid;gap:.9rem;margin:1.4rem 0}
+.info i{width:2rem;color:var(--cyan)}
+.map{display:grid;place-items:center;gap:.5rem;text-align:center;height:210px;border-radius:var(--r);border:1px dashed var(--line);background:repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px);color:var(--mut);padding:1rem}
+.map i{font-size:2rem;color:var(--pur)}
+
+/* footer */
+.foot{padding:70px 0 30px;background:var(--bg0);border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.3fr;gap:3rem}
+.foot p{color:var(--mut);margin:.9rem 0;font-size:.92rem}
+.foot h3{font-size:1rem;margin-bottom:1rem}
+.foot-grid>div>a:not(.logo){display:block;color:var(--mut);margin-bottom:.5rem}
+.foot-grid>div>a:not(.logo):hover{color:#fff}
+.social{display:flex;gap:.6rem}
+.social a{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);transition:.25s}
+.social a:hover{background:var(--grad);transform:translateY(-3px)}
+.news{display:flex;gap:.5rem}
+.news input{flex:1;min-width:0;padding:.6rem 1rem;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--tx);font:inherit}
+.copy{margin-top:3rem!important;padding-top:1.5rem;border-top:1px solid var(--line);text-align:center;font-size:.85rem!important}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .g3{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(2,1fr)}
+  .hero-grid,.split,.demo,.contact{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .nav-cta{display:none}.burger{display:grid;gap:5px;background:none;border:0;padding:8px;cursor:pointer}
+  .burger span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+  .burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded=true] span:nth-child(2){opacity:0}
+  .burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  #menu{position:fixed;inset:72px 0 auto;flex-direction:column;gap:0;padding:1rem 4%;background:rgba(var(--bgrgb),.97);backdrop-filter:blur(16px);transform:translateY(-130%);transition:transform .35s;border-bottom:1px solid var(--line)}
+  #menu.open{transform:none}
+  #menu a:not(.btn){padding:.9rem 0;border-bottom:1px solid var(--line)}
+  .menu-cta{display:inline-flex;justify-content:center;margin-top:1rem}
+  .hero{padding-top:120px}
+  .g3,.g4,.foot-grid{grid-template-columns:1fr}
+  .badge{font-size:.72rem;padding:.4rem .7rem}.b1{left:0}.b2{right:0}
+  .sec{padding:70px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+.btn,.ico,.av,.logo-mark{color:#03121a}.btn-ghost{color:var(--tx)}
+.fac .soc a:hover,.social a:hover{color:#03121a}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:60}
+.wa{position:fixed;right:18px;bottom:18px;z-index:55;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;font-size:1.7rem;box-shadow:0 10px 30px rgba(37,211,102,.5);transition:transform .25s}
+.wa:hover{transform:scale(1.1) rotate(-6deg)}
+.marq{overflow:hidden;padding:26px 0;border-block:1px solid var(--line);margin-top:70px}
+.marq-in{display:flex;gap:3rem;width:max-content;animation:marq 28s linear infinite;font:700 1.15rem 'Bricolage Grotesque',sans-serif;color:var(--mut)}
+.marq-in span{display:flex;align-items:center;gap:3rem;white-space:nowrap}
+.marq-in i{color:var(--cyan);font-size:.8rem}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.16) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:linear-gradient(#000,transparent 85%);mask-image:linear-gradient(#000,transparent 85%);pointer-events:none}
+.doodles i{position:absolute;color:#fff;opacity:.09;font-size:3.2rem;animation:float 7s ease-in-out infinite;pointer-events:none}
+.doodles i:nth-child(1){top:16%;left:4%}.doodles i:nth-child(2){top:62%;left:44%;animation-delay:-2s}.doodles i:nth-child(3){top:12%;left:46%;animation-delay:-4s}
+.doodles i:nth-child(4){bottom:8%;left:8%;animation-delay:-1s}.doodles i:nth-child(5){top:8%;right:4%;animation-delay:-3s}.doodles i:nth-child(6){bottom:10%;right:6%;animation-delay:-5s}
+.alt{background:radial-gradient(700px 320px at 8% 0,rgba(var(--c1),.13),transparent),radial-gradient(700px 320px at 100% 100%,rgba(var(--c4),.11),transparent),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/64px 64px,var(--bg2)}
+.sec:not(.alt){background:radial-gradient(600px 300px at 90% 0,rgba(var(--c2),.09),transparent),var(--bg)}
+.foot{background:radial-gradient(800px 260px at 50% 0,rgba(var(--c1),.12),transparent),var(--bg0)}
+h1{font-weight:800;letter-spacing:-.03em}
+
+.orbit{--s:min(430px,84vw);position:relative;width:var(--s);height:var(--s);margin:auto}
+.ring{position:absolute;border-radius:50%}
+.r1{inset:0;border:1.5px dashed rgba(255,255,255,.25);animation:spin 60s linear infinite}
+.r2{inset:19%;border:1px solid rgba(var(--c3),.35);box-shadow:0 0 60px rgba(var(--c1),.25),inset 0 0 60px rgba(var(--c1),.18)}
+.core{position:absolute;inset:25%;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,.18);box-shadow:0 0 0 10px rgba(var(--c1),.12),0 25px 70px rgba(0,0,0,.5),0 0 90px rgba(var(--c2),.45)}
+.core svg{width:100%;height:100%;display:block}
+.spin{position:absolute;inset:0;animation:spin 36s linear infinite}
+.chip{position:absolute;top:50%;left:50%;width:56px;height:56px;margin:-28px;transform:rotate(var(--a)) translateX(calc(var(--s)*.5)) rotate(calc(var(--a)*-1))}
+.chip .in{display:grid;place-items:center;width:100%;height:100%;border-radius:18px;background:rgba(var(--surf),.8);border:1px solid var(--line);backdrop-filter:blur(8px);color:var(--cyan);font-size:1.3rem;box-shadow:0 10px 26px rgba(0,0,0,.4),0 0 18px rgba(var(--c2),.3);animation:unspin 36s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes unspin{to{transform:rotate(-360deg)}}
+@media(max-width:760px){.chip{width:44px;height:44px;margin:-22px}.chip .in{font-size:1.05rem;border-radius:14px}.hero-art{padding:1.5rem 0}}
+
+.nav{padding-top:env(safe-area-inset-top,0px)}#menu{top:calc(72px + env(safe-area-inset-top,0px))}
+.wa{bottom:calc(18px + env(safe-area-inset-bottom,0px));right:calc(18px + env(safe-area-inset-right,0px))}
+@media(max-width:760px){.cta-row .btn{flex:1;justify-content:center}.wa{width:50px;height:50px;font-size:1.5rem}}
+
+:root{--c1:47,191,143;--c2:39,181,166;--c3:229,193,90;--c4:58,166,214;--bgrgb:4,20,26;--surf:6,36,44;--surf2:8,40,48;--bg0:#030d11;--link:#5eead4;--h1:#04141a;--h2:#06303a;--h3:#064e3b;--h4:#052f3d;--b1:#1b8f84;--b2:#0a3340}
+[data-theme=violet]{--bg:#070d24;--bg2:#0b1433;--blue:#5b8def;--pur:#8b6cf0;--cyan:#6fd8ea;--grad:linear-gradient(135deg,#5b8def,#8b6cf0);--c1:91,141,239;--c2:139,108,240;--c3:111,216,234;--c4:139,108,240;--bgrgb:7,13,36;--surf:12,20,60;--surf2:14,22,66;--bg0:#050a1c;--link:#c4b5fd;--h1:#070d24;--h2:#101a52;--h3:#2a1566;--h4:#0a1a55;--b1:#3b4fd6;--b2:#0b1433}
+[data-theme=sunset]{--bg:#150a14;--bg2:#1f0f1d;--blue:#fb923c;--pur:#f43f5e;--cyan:#fdba74;--grad:linear-gradient(135deg,#fb923c,#f43f5e);--c1:251,146,60;--c2:244,63,94;--c3:253,186,116;--c4:244,63,94;--bgrgb:21,10,20;--surf:40,16,34;--surf2:46,18,38;--bg0:#0e060d;--link:#fda4af;--h1:#150a14;--h2:#3a1230;--h3:#5b1a3a;--h4:#2a0f26;--b1:#c2410c;--b2:#3a1230}
+.themes{position:fixed;left:calc(14px + env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:55;display:flex;gap:8px;padding:8px 10px;border-radius:99px;background:rgba(var(--surf),.85);border:1px solid var(--line);backdrop-filter:blur(12px)}
+.themes button{width:26px;height:26px;border-radius:50%;border:2px solid transparent;background:linear-gradient(135deg,var(--a),var(--b));cursor:pointer;transition:transform .2s}
+.themes button:hover{transform:scale(1.15)}.themes button[aria-pressed=true]{border-color:#fff}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(440px circle at var(--mx,72%) var(--my,30%),rgba(var(--c1),.2),transparent 60%);pointer-events:none}
+.hero-grid{z-index:1}
+.orbit{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out}
+#tag{transition:opacity .3s}
+.fee{margin:auto 0 1rem!important;color:var(--mut);font-size:.9rem}.fee strong{color:var(--tx);font-size:1.3rem}
+.course .link{margin-top:0}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="progress" id="progress"></div>
+<a class="wa" href="https://wa.me/919876543210?text=Hi%20Apex%20Academy%2C%20I%20want%20to%20know%20about%20admissions" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<div class="themes" role="group" aria-label="Colour theme"><button data-t="emerald" aria-label="Emerald theme" style="--a:#2fbf8f;--b:#3aa6d6"></button><button data-t="violet" aria-label="Royal violet theme" style="--a:#5b8def;--b:#8b6cf0"></button><button data-t="sunset" aria-label="Sunset theme" style="--a:#fb923c;--b:#f43f5e"></button></div>
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="logo"><span class="logo-mark"><i class="fa-solid fa-bolt"></i></span>Apex<b>Academy</b></a>
+    <nav id="menu" aria-label="Main">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#courses">Courses</a><a href="#results">Results</a><a href="#faculty">Faculty</a><a href="#contact">Contact</a>
+      <a href="#demo" class="btn btn-sm menu-cta">Enroll Now</a>
+    </nav>
+    <a href="#demo" class="btn btn-sm nav-cta">Enroll Now</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="home">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="doodles" aria-hidden="true"><i class="fa-solid fa-atom"></i><i class="fa-solid fa-square-root-variable"></i><i class="fa-solid fa-dna"></i><i class="fa-solid fa-flask"></i><i class="fa-solid fa-book-open"></i><i class="fa-solid fa-compass-drafting"></i></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="pill"><i class="fa-solid fa-circle"></i> <span id="tag">Admissions open for 2027 batches</span></p>
+      <h1>Your Dreams Deserve More Than Ordinary Preparation.</h1>
+      <p class="lead">Expert guidance, personal mentorship and a system built around one thing: your result. Learn from teachers who have produced toppers for over fifteen years.</p>
+      <div class="cta-row">
+        <a href="#courses" class="btn">Explore Courses</a>
+        <a href="#demo" class="btn btn-ghost"><i class="fa-regular fa-circle-play"></i> Book Free Demo</a>
+      </div>
+      <div class="mini-stats"><div><strong data-count="10000" data-suffix="+">0</strong><span>Students</span></div><div><strong data-count="95" data-suffix="%">0</strong><span>Success rate</span></div></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="orbit"><div class="ring r1"></div><div class="ring r2"></div><div class="core"><svg viewBox="0 0 200 200"><defs><linearGradient id="bgc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--b1)"/><stop offset="1" style="stop-color:var(--b2)"/></linearGradient></defs><rect width="200" height="200" fill="url(#bgc)"/><circle cx="150" cy="40" r="26" fill="#e5c15a" opacity=".18"/>
+<path d="M20 200c0-46 34-70 80-70s80 24 80 70z" fill="#3aa6d6"/><path d="M84 134l16 20 16-20z" fill="#f4f7fb"/><rect x="89" y="110" width="22" height="30" rx="10" fill="#e9bf9a"/>
+<ellipse cx="100" cy="88" rx="30" ry="34" fill="#f1c9a5"/><path d="M68 88c-5-34 13-50 32-50s37 16 32 50c-6-14-18-20-32-20s-26 6-32 20z" fill="#1f1a33"/>
+<circle cx="89" cy="92" r="3" fill="#222"/><circle cx="111" cy="92" r="3" fill="#222"/><path d="M92 106q8 7 16 0" fill="none" stroke="#a65a3a" stroke-width="3" stroke-linecap="round"/>
+<path d="M62 58l38-17 38 17-38 17z" fill="#e5c15a"/><path d="M82 67v13c0 8 36 8 36 0V67" fill="none" stroke="#e5c15a" stroke-width="4"/><path d="M136 58v24" stroke="#e5c15a" stroke-width="3"/><circle cx="136" cy="84" r="4" fill="#e5c15a"/></svg></div><div class="spin"><span class="chip" style="--a:0deg"><span class="in"><i class="fa-solid fa-atom"></i></span></span><span class="chip" style="--a:60deg"><span class="in"><i class="fa-solid fa-dna"></i></span></span><span class="chip" style="--a:120deg"><span class="in"><i class="fa-solid fa-square-root-variable"></i></span></span><span class="chip" style="--a:180deg"><span class="in"><i class="fa-solid fa-flask"></i></span></span><span class="chip" style="--a:240deg"><span class="in"><i class="fa-solid fa-book-open"></i></span></span><span class="chip" style="--a:300deg"><span class="in"><i class="fa-solid fa-trophy"></i></span></span></div></div>
+      <div class="badge b1"><i class="fa-solid fa-trophy"></i> AIR 12 · JEE Advanced</div>
+      <div class="badge b2"><i class="fa-solid fa-user-graduate"></i> 650+ NEET selections</div>
+      <div class="badge b3"><i class="fa-solid fa-star"></i> 4.9 student rating</div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" id="about">
+  <div class="wrap stat-grid">
+    <div class="glass"><strong data-count="10000" data-suffix="+">0</strong><span>Students taught</span></div>
+    <div class="glass"><strong data-count="95" data-suffix="%">0</strong><span>Success rate</span></div>
+    <div class="glass"><strong data-count="50" data-suffix="+">0</strong><span>Expert teachers</span></div>
+    <div class="glass"><strong data-count="15" data-suffix="+">0</strong><span>Years of excellence</span></div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="marq-in"><span>JEE<i class="fa-solid fa-star"></i></span><span>NEET<i class="fa-solid fa-star"></i></span><span>UPSC<i class="fa-solid fa-star"></i></span><span>SSC & Banking<i class="fa-solid fa-star"></i></span><span>CUET<i class="fa-solid fa-star"></i></span><span>Foundation<i class="fa-solid fa-star"></i></span><span>Olympiads<i class="fa-solid fa-star"></i></span><span>JEE<i class="fa-solid fa-star"></i></span><span>NEET<i class="fa-solid fa-star"></i></span><span>UPSC<i class="fa-solid fa-star"></i></span><span>SSC & Banking<i class="fa-solid fa-star"></i></span><span>CUET<i class="fa-solid fa-star"></i></span><span>Foundation<i class="fa-solid fa-star"></i></span><span>Olympiads<i class="fa-solid fa-star"></i></span></div></div>
+
+<section class="sec" id="courses"><div class="wrap">
+  <div class="head"><h2>Pick the course that fits your goal</h2><p>Every programme includes live classes, notes, mock tests and a personal mentor.</p></div>
+  <div class="grid g3" id="courseGrid"></div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="head"><h2>What makes Apex different</h2><p>Six things every student gets from day one.</p></div>
+  <div class="grid g3" id="whyGrid"></div>
+</div></section>
+
+<section class="sec" id="results"><div class="wrap">
+  <div class="head"><h2>Results our students earned</h2><p>Real effort, real ranks. Here are a few of their stories.</p></div>
+  <div class="grid g3" id="storyGrid"></div>
+</div></section>
+
+<section class="sec alt" id="faculty"><div class="wrap">
+  <div class="head"><h2>Learn from teachers who've done it before</h2><p>Subject experts with years of classroom results behind them.</p></div>
+  <div class="grid g4" id="facGrid"></div>
+</div></section>
+
+<section class="sec"><div class="wrap split">
+  <div class="split-copy">
+    <h2>One platform for everything you study</h2>
+    <p class="lead">Switch between tabs to see how a day at Apex works.</p>
+    <div class="tabs" role="tablist" id="tabs"></div>
+  </div>
+  <div class="glass panel" id="tabPanel" aria-live="polite"></div>
+</div></section>
+
+<section class="sec alt" id="demo"><div class="wrap demo">
+  <div class="demo-copy">
+    <h2>Book your free demo class</h2>
+    <p class="lead">Sit in on a live class, meet your mentor and get a study plan. No payment, no obligation.</p>
+    <ul class="ticks"><li><i class="fa-solid fa-check"></i> 60-minute live session</li><li><i class="fa-solid fa-check"></i> Free diagnostic test</li><li><i class="fa-solid fa-check"></i> Callback within 24 hours</li></ul>
+  </div>
+  <form class="glass form" id="demoForm" novalidate>
+    <label>Student name<input name="name" type="text" autocomplete="name" required><small></small></label>
+    <label>Phone number<input name="phone" type="tel" inputmode="numeric" placeholder="10-digit mobile number" autocomplete="tel" required><small></small></label>
+    <label>Email<input name="email" type="email" autocomplete="email" required><small></small></label>
+    <label>Course<select name="course" id="courseSelect" required><option value="">Choose a course</option></select><small></small></label>
+    <fieldset><legend>Preferred learning mode</legend>
+      <label class="radio"><input type="radio" name="mode" value="Online" checked> Online</label>
+      <label class="radio"><input type="radio" name="mode" value="Offline"> Offline</label>
+      <label class="radio"><input type="radio" name="mode" value="Hybrid"> Hybrid</label>
+    </fieldset>
+    <button class="btn" type="submit">Book free demo</button>
+    <p class="ok" id="demoOk" role="status" hidden></p>
+  </form>
+</div></section>
+
+<section class="sec"><div class="wrap narrow">
+  <div class="head"><h2>Questions students ask us</h2></div>
+  <div class="faq" id="faq"></div>
+</div></section>
+
+<section class="sec alt" id="contact"><div class="wrap contact">
+  <div>
+    <h2>Visit us or send a message</h2>
+    <ul class="info">
+      <li><i class="fa-solid fa-location-dot"></i> 24 Education Hub, Sector 12, New Delhi 110001</li>
+      <li><i class="fa-solid fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></li>
+      <li><i class="fa-solid fa-envelope"></i> <a href="mailto:hello@apexacademy.in">hello@apexacademy.in</a></li>
+      <li><i class="fa-regular fa-clock"></i> Mon to Sat, 8 am to 8 pm</li>
+    </ul>
+    <div class="map" role="img" aria-label="Map placeholder"><i class="fa-solid fa-map-location-dot"></i><span>Map placeholder: embed your Google Maps iframe here</span></div>
+  </div>
+  <form class="glass form" id="contactForm" novalidate>
+    <label>Your name<input name="name" type="text" required><small></small></label>
+    <label>Email<input name="email" type="email" required><small></small></label>
+    <label>Message<textarea name="msg" rows="4" required></textarea><small></small></label>
+    <button class="btn" type="submit">Send enquiry</button>
+    <p class="ok" id="contactOk" role="status" hidden></p>
+  </form>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <div class="foot-grid">
+    <div><a href="#home" class="logo"><span class="logo-mark"><i class="fa-solid fa-bolt"></i></span>Apex<b>Academy</b></a><p>Premium coaching for JEE, NEET, UPSC, SSC, CUET and foundation students.</p>
+      <div class="social"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div></div>
+    <div><h3>Quick links</h3><a href="#about">About</a><a href="#courses">Courses</a><a href="#results">Results</a><a href="#faculty">Faculty</a><a href="#contact">Contact</a></div>
+    <div><h3>Stay in the loop</h3><p>Exam alerts and free study tips, once a week.</p>
+      <form class="news" id="news" novalidate><input type="email" placeholder="Your email" aria-label="Email for newsletter" required><button class="btn btn-sm" type="submit">Subscribe</button></form><p class="ok" id="newsOk" role="status" hidden></p></div>
+  </div>
+  <p class="copy">© <span id="yr"></span> Apex Academy. All rights reserved.</p>
+</div></footer>
+<script>'use strict';
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const initials = n => n.split(' ').map(w => w[0]).slice(0, 2).join('');
+
+/* ---------- content data ---------- */
+const courses = [
+  ['fa-atom', 'JEE Preparation', 'Build the speed and depth for JEE Main and Advanced.', '1 or 2 years', ['Concept-first Physics, Chemistry, Maths', 'Weekly full-length mocks', 'Advanced problem-solving labs']],
+  ['fa-dna', 'NEET Preparation', 'NCERT-anchored biology with high-yield practice for medical entrance.', '1 or 2 years', ['NCERT line-by-line revision', 'Diagram and PYQ drills', 'OMR-pattern test series']],
+  ['fa-landmark', 'UPSC Preparation', 'Prelims, Mains and interview guidance from civil services mentors.', '12 months', ['Daily current affairs', 'Answer-writing practice', 'Mock interviews']],
+  ['fa-building-columns', 'SSC & Banking', 'Quant, reasoning and English for SSC, IBPS and SBI exams.', '6 months', ['Shortcut-based quant', 'Sectional timed tests', 'Descriptive writing help']],
+  ['fa-graduation-cap', 'CUET Preparation', 'Domain subjects and general test coaching for central universities.', '6 months', ['Domain subject modules', 'General test practice', 'College cut-off guidance']],
+  ['fa-seedling', 'Foundation Courses', 'Classes 8 to 10 with Olympiad and board exam readiness built in.', '1 year', ['Strong fundamentals', 'Olympiad training', 'Monthly progress reports']]
+];
+const why = [
+  ['fa-chalkboard-user', 'Experienced faculty', 'Teachers with 10+ years of results in their subject.'],
+  ['fa-user-group', 'Personalized mentorship', 'One mentor tracks your goals, habits and weak spots.'],
+  ['fa-video', 'Live and recorded classes', 'Attend live, or replay any lecture before the next one.'],
+  ['fa-file-pen', 'Weekly mock tests', 'Exam-pattern tests with detailed analysis every week.'],
+  ['fa-comments', 'Doubt solving sessions', 'Daily doubt desks, in person and in the app.'],
+  ['fa-chart-line', 'Performance tracking', 'See rank, accuracy and topic-wise progress at a glance.']
+];
+const stories = [
+  ['Aarav Mehta', 'JEE Advanced 2026', 'AIR 112', 'The weekly mocks fixed my time management. By the final month I was finishing papers with 20 minutes spare.'],
+  ['Ishita Sharma', 'NEET UG 2026', '686/720', 'My mentor spotted that I was losing marks in Physics numericals and built a plan around it. It worked.'],
+  ['Rohan Verma', 'UPSC CSE 2025', 'Rank 94', 'Answer-writing reviews were the difference. Every answer came back with specific, usable feedback.'],
+  ['Sneha Kapoor', 'SBI PO 2026', 'Selected', 'Sectional tests and shortcut classes helped me clear the cut-offs in my first attempt.'],
+  ['Karan Singh', 'CUET 2026', '99.4 %ile', 'The domain modules matched the exam closely. I got into my first-choice DU college.'],
+  ['Meera Joshi', 'NTSE 2026', 'Scholar', 'The foundation batch made hard topics feel simple. I started enjoying maths for the first time.']
+];
+const fees = ['₹95,000', '₹98,000', '₹1,25,000', '₹32,000', '₹28,000', '₹45,000'];
+const faculty = [
+  ['Dr. Rajiv Malhotra', 'Physics · JEE', '18 years'],
+  ['Anita Deshmukh', 'Biology · NEET', '14 years'],
+  ['Sameer Khan', 'Mathematics · JEE', '12 years'],
+  ['Prof. Neha Arora', 'Polity & Governance · UPSC', '16 years']
+];
+const faqs = [
+  ['Can I try a class before I enrol?', 'Yes. Book a free demo and you will attend a live class, take a short diagnostic test and meet a mentor.'],
+  ['Do you offer both online and offline batches?', 'We run online, offline and hybrid batches. You can switch mode between terms if your plans change.'],
+  ['What if I miss a live class?', 'Every class is recorded and available in your dashboard within a few hours, along with notes.'],
+  ['Are scholarships available?', 'Yes. Students who score well in our admission test can receive fee concessions of up to 100%.'],
+  ['How are doubts handled?', 'Post a doubt in the app for a reply within hours, or visit the doubt desk after class.'],
+  ['What are the course fees?', 'Fees start at ₹28,000 a year for CUET and go up to ₹1,25,000 for UPSC. Instalments and scholarships are available.'],
+  ['Is there an EMI option?', 'Fees can be split into easy instalments with no extra charge. Ask our counsellor for the plan.']
+];
+const tabs = [
+  { icon: 'fa-laptop', name: 'Online learning', title: 'Learn from anywhere', text: 'Join interactive live classes from any device, with chat, polls and instant replays.', chips: ['HD live classes', 'Replays', 'Mobile app'] },
+  { icon: 'fa-book-open', name: 'Study materials', title: 'Notes that match the exam', text: 'Chapter notes, formula sheets and thousands of practice questions, updated every year.', chips: ['Printed modules', 'PYQ bank', 'Formula sheets'] },
+  { icon: 'fa-tower-broadcast', name: 'Live classes', title: 'Teach-back, not just lectures', text: 'Small interactive batches where you answer questions in class and get feedback straight away.', chips: ['Live polls', 'Doubt chat', 'Small batches'] },
+  { icon: 'fa-chart-pie', name: 'Progress tracking', title: 'Know exactly where you stand', text: 'Your dashboard shows accuracy, speed and rank trends so you can fix weak topics early.', bars: [['Physics', 82], ['Chemistry', 68], ['Mathematics', 91]] }
+];
+
+/* ---------- render ---------- */
+const sel = $('#courseSelect');
+$('#courseGrid').innerHTML = courses.map((c, i) => `
+  <article class="glass card course rv"><div class="ico"><i class="fa-solid ${c[0]}"></i></div><h3>${c[1]}</h3><p>${c[2]}</p>
+  <span class="dur"><i class="fa-regular fa-clock"></i> ${c[3]}</span><ul>${c[4].map(f => `<li>${f}</li>`).join('')}</ul>
+  <p class="fee">From <strong>${fees[i]}</strong> / year</p><a class="link" href="#demo" data-course="${c[1]}">Explore course <i class="fa-solid fa-arrow-right"></i></a></article>`).join('');
+courses.forEach(c => sel.add(new Option(c[1], c[1])));
+
+$('#whyGrid').innerHTML = why.map(w => `<article class="glass card rv"><div class="ico"><i class="fa-solid ${w[0]}"></i></div><h3>${w[1]}</h3><p>${w[2]}</p></article>`).join('');
+
+$('#storyGrid').innerHTML = stories.map(s => `
+  <article class="glass card story rv"><div class="who"><div class="av">${initials(s[0])}</div><div><h3>${s[0]}</h3><small>${s[1]}</small></div><span class="rank">${s[2]}</span></div><q>${s[3]}</q></article>`).join('');
+
+$('#facGrid').innerHTML = faculty.map(f => `
+  <article class="glass card fac rv"><div class="av">${initials(f[0].replace(/^(Dr\.|Prof\.)\s/, ''))}</div><h3>${f[0]}</h3><p>${f[1]}</p><span class="dur">${f[2]} experience</span>
+  <div class="soc"><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></div></article>`).join('');
+
+$('#faq').innerHTML = faqs.map((f, i) => `
+  <div class="q"><button aria-expanded="false" aria-controls="a${i}"><span>${f[0]}</span><i class="fa-solid fa-plus"></i></button><div class="a" id="a${i}"><p>${f[1]}</p></div></div>`).join('');
+
+/* ---------- tabs ---------- */
+const tabBox = $('#tabs'), panel = $('#tabPanel');
+tabBox.innerHTML = tabs.map((t, i) => `<button class="tab" role="tab" aria-selected="${i === 0}" data-i="${i}"><i class="fa-solid ${t.icon}"></i>${t.name}</button>`).join('');
+function showTab(i) {
+  const t = tabs[i];
+  $$('.tab').forEach((b, j) => b.setAttribute('aria-selected', j === i));
+  panel.innerHTML = `<div class="ico"><i class="fa-solid ${t.icon}"></i></div><h3>${t.title}</h3><p>${t.text}</p>` +
+    (t.bars ? `<div class="bars">${t.bars.map(b => `<div class="bar">${b[0]} · ${b[1]}%<div><i data-w="${b[1]}"></i></div></div>`).join('')}</div>`
+            : `<div class="chips">${t.chips.map(c => `<span>${c}</span>`).join('')}</div>`);
+  requestAnimationFrame(() => requestAnimationFrame(() => $$('.bar i', panel).forEach(el => el.style.width = el.dataset.w + '%')));
+}
+tabBox.addEventListener('click', e => { const b = e.target.closest('.tab'); if (b) showTab(+b.dataset.i); });
+showTab(0);
+
+/* ---------- FAQ accordion ---------- */
+$('#faq').addEventListener('click', e => {
+  const btn = e.target.closest('button'); if (!btn) return;
+  const item = btn.parentElement, open = !item.classList.contains('open');
+  $$('.q.open').forEach(q => { q.classList.remove('open'); $('button', q).setAttribute('aria-expanded', 'false'); });
+  if (open) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+});
+
+/* ---------- nav ---------- */
+const nav = $('#nav'), menu = $('#menu'), burger = $('#burger');
+const setMenu = o => { menu.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); };
+burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 30), { passive: true });
+const links = $$('#menu a:not(.btn)');
+const spy = new IntersectionObserver(es => es.forEach(en => {
+  if (en.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id));
+}), { rootMargin: '-45% 0px -50% 0px' });
+links.forEach(a => { const s = $(a.getAttribute('href')); if (s) spy.observe(s); });
+
+/* ---------- counters + reveal ---------- */
+const fmt = n => n.toLocaleString('en-IN');
+function count(el) {
+  const target = +el.dataset.count, suf = el.dataset.suffix || '', t0 = performance.now(), dur = 1800;
+  (function tick(t) {
+    const p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+    el.textContent = fmt(Math.round(target * e)) + suf;
+    if (p < 1) requestAnimationFrame(tick);
+  })(t0);
+}
+const io = new IntersectionObserver(es => es.forEach(en => {
+  if (!en.isIntersecting) return;
+  en.target.classList.add('in');
+  if (en.target.dataset.count) count(en.target);
+  io.unobserve(en.target);
+}), { threshold: .2 });
+$$('.rv, [data-count]').forEach((el, i) => { if (el.classList.contains('rv')) el.style.transitionDelay = (i % 3) * 80 + 'ms'; io.observe(el); });
+
+/* ---------- forms ---------- */
+const rules = {
+  name: v => v.trim().length >= 2 || 'Enter your full name.',
+  phone: v => /^[6-9]\d{9}$/.test(v.replace(/[\s-]/g, '')) || 'Enter a valid 10-digit mobile number.',
+  email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) || 'Enter a valid email address.',
+  course: v => !!v || 'Choose a course.',
+  msg: v => v.trim().length >= 10 || 'Write at least 10 characters.'
+};
+function validate(form) {
+  let ok = true;
+  $$('input:not([type=radio]),select,textarea', form).forEach(f => {
+    const r = rules[f.name] ? rules[f.name](f.value) : true, small = f.parentElement.querySelector('small');
+    f.classList.toggle('bad', r !== true); f.setAttribute('aria-invalid', r !== true);
+    if (small) small.textContent = r === true ? '' : r;
+    if (r !== true) ok = false;
+  });
+  return ok;
+}
+function wire(id, okId, message) {
+  const form = $(id), out = $(okId);
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!validate(form)) { $('.bad', form)?.focus(); return; }
+    const first = new FormData(form).get('name')?.split(' ')[0];
+    out.textContent = message(first); out.hidden = false; form.reset();
+    $$('.bad', form).forEach(f => f.classList.remove('bad'));
+  });
+  form.addEventListener('input', e => { if (e.target.classList.contains('bad')) validate(form); });
+}
+wire('#demoForm', '#demoOk', n => `Thank you, ${n}. Your free demo is booked. Our counsellor will call you within 24 hours.`);
+wire('#contactForm', '#contactOk', n => `Thanks, ${n}. We received your enquiry and will reply by email shortly.`);
+
+const news = $('#news');
+news.addEventListener('submit', e => {
+  e.preventDefault();
+  const i = $('input', news), ok = rules.email(i.value) === true, out = $('#newsOk');
+  out.textContent = ok ? 'You are subscribed. Watch your inbox for the next weekly update.' : 'Enter a valid email address.';
+  out.hidden = false; if (ok) news.reset();
+});
+
+/* "Explore course" pre-selects the course in the demo form */
+$('#courseGrid').addEventListener('click', e => { const a = e.target.closest('[data-course]'); if (a) sel.value = a.dataset.course; });
+$('#yr').textContent = new Date().getFullYear();
+
+addEventListener('scroll',()=>{const d=document.documentElement;$('#progress').style.width=(scrollY/(d.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+
+/* theme switcher */
+const root = document.documentElement;
+function setTheme(t) { root.dataset.theme = t; $$('.themes button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === t)); try { localStorage.setItem('apex-theme', t); } catch (e) {} }
+let saved = 'emerald'; try { saved = localStorage.getItem('apex-theme') || 'emerald'; } catch (e) {}
+setTheme(saved);
+$('.themes').addEventListener('click', e => { const b = e.target.closest('button'); if (b) setTheme(b.dataset.t); });
+/* hero: rotating tagline, spotlight and tilt */
+const tags = ['Admissions open for 2027 batches', 'New JEE & NEET batches start 15 October', 'Free demo class every Saturday'];
+let ti = 0; const tagEl = $('#tag');
+setInterval(() => { ti = (ti + 1) % tags.length; tagEl.style.opacity = 0; setTimeout(() => { tagEl.textContent = tags[ti]; tagEl.style.opacity = 1; }, 300); }, 3600);
+const hero = $('#home'), orb = $('.orbit');
+if (matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches) {
+  hero.addEventListener('mousemove', e => { const r = hero.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+    hero.style.setProperty('--mx', x * 100 + '%'); hero.style.setProperty('--my', y * 100 + '%');
+    orb.style.setProperty('--ry', (x - .5) * 14 + 'deg'); orb.style.setProperty('--rx', (.5 - y) * 14 + 'deg'); });
+  hero.addEventListener('mouseleave', () => { orb.style.setProperty('--ry', '0deg'); orb.style.setProperty('--rx', '0deg'); });
+}
+</script>
+</body>
+</html>
